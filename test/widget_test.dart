@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:myportofolio_mobile/menu.dart';
+import 'package:myportofolio_mobile/screens/menu.dart';
+
 void main() {
   testWidgets('MyPortfolio menampilkan identitas dan tombol',
       (WidgetTester tester) async {
