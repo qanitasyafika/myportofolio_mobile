@@ -1,6 +1,6 @@
-import 'package:material_ui/material_ui.dart';
-import 'package:myportofolio_mobile/screens/menu.dart';
-import 'package:myportofolio_mobile/screens/project_form.dart';
+
+import 'package:flutter/material.dart';
+import 'package:myportofolio_mobile/routes.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -9,35 +9,50 @@ class LeftDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
+        padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
-            decoration: BoxDecoration(color: Colors.indigo),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'My Portfolio',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+            padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+            decoration: BoxDecoration(
+              color: Colors.indigo,
+            ),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'My Portfolio',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Explore personal projects and experiences!',
-                  style: TextStyle(fontSize: 15, color: Colors.white),
-                ),
-              ],
+                  SizedBox(height: 4),
+                  Text(
+                    'Explore personal projects and experiences!',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           ListTile(
             leading: const Icon(Icons.home_outlined),
             title: const Text('Home'),
             onTap: () {
-              Navigator.pushReplacement(
+              Navigator.pushReplacementNamed(
                 context,
-                MaterialPageRoute(builder: (context) => MyHomePage()),
+                AppRoutes.home,
               );
             },
           ),
@@ -45,11 +60,19 @@ class LeftDrawer extends StatelessWidget {
             leading: const Icon(Icons.add_circle_outline),
             title: const Text('Add Project'),
             onTap: () {
-              Navigator.push(
+              Navigator.pushNamed(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => const ProjectFormPage(),
-                ),
+                AppRoutes.project,
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.school_outlined),
+            title: const Text('Tambah Edukasi'),
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                AppRoutes.education,
               );
             },
           ),

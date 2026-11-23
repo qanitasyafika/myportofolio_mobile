@@ -18,4 +18,24 @@ Hubungan parent-child ini membuat tampilan aplikasi lebih terstruktur. Contohnya
 Dalam pengerjaan tugas ini, saya menggunakan ChatGPT sebagai alat bantu untuk memahami instruksi dan mengatasi beberapa kendala selama proses pengerjaan. Saya menggunakan AI dengan memberikan pesan error, dan screenshot Warning dapat memperoleh penjelasan serta arahan perbaikan. Penggunaan AI dalam tugas ini berperan sebagai pendamping pembelajaran dan debugging, sedangkan pemahaman, pemeriksaan, serta pengujian hasil akhir tetap saya yang melakukan double check.
 
 
+### Tugas 8
+
+1. Navigator.push() digunakan untuk membuka halaman baru dengan menambahkan route ke atas halaman yang sedang aktif. Navigator.pushReplacement() digunakan untuk mengganti halaman aktif dengan halaman baru, sedangkan Navigator.pop() digunakan untuk menutup halaman aktif dan kembali ke halaman sebelumnya. Pada tugas ini, Navigator.push() digunakan untuk membuka formulir Edukasi dari kartu aksi. Sementara itu, opsi Home pada drawer menggunakan Navigator.pushReplacementNamed() untuk mengganti halaman formulir dengan halaman utama.
+
+2. Scaffold berfungsi sebagai struktur utama halaman, AppBar digunakan untuk menampilkan judul halaman, sedangkan Drawer menyediakan navigasi antarhalaman. Penggunaan komponen tersebut membantu menjaga struktur aplikasi tetap konsisten. Contohnya, warna indigo digunakan pada AppBar halaman utama, halaman formulir, dan bagian DrawerHeader.
+
+3. SingleChildScrollView dipilih agar formulir tetap dapat digulir ketika ruang layar terbatas atau keyboard muncul. Padding digunakan untuk memberikan jarak antara komponen formulir, sedangkan SizedBox digunakan untuk mengatur jarak antarinput dan tombol. Dengan susunan tersebut, seluruh input dan tombol Simpan tetap dapat dijangkau pada layar berukuran kecil.
+
+4. GlobalKey<FormState> digunakan untuk mengakses dan mengelola kondisi Form. Validator berfungsi memeriksa apakah setiap input memenuhi aturan yang ditentukan, sedangkan validate() menjalankan seluruh validator ketika tombol Simpan ditekan. Contohnya, input nama institusi yang hanya berisi spasi akan ditolak karena tidak memiliki karakter yang valid setelah menggunakan trim(). Penggunaan keyboard numerik saja juga belum cukup untuk menjamin tahun yang dimasukkan benar karena pengguna masih dapat memasukkan tahun dengan jumlah digit yang tidak sesuai atau tahun lulus yang lebih awal daripada tahun masuk.
+
+
+## AI DISCLOSURE
+
+Dalam pengerjaan Tugas 8, saya menggunakan ChatGPT sebagai alat bantu untuk memahami instruksi tugas. Saya menggunakan AI dengan memberikan pesan error, dan screenshot Warning dapat memperoleh penjelasan serta arahan perbaikan. 
+
+Saya tetap bertanggung jawab untuk memeriksa kode, menjalankan aplikasi, melakukan pengujian, dan memperbaiki kesalahan yang ditemukan. Saya juga memahami bahwa hasil AI tidak selalu langsung sesuai dengan lingkungan dan versi Flutter yang digunakan sehingga tetap diperlukan pemeriksaan secara manual.
+
+
+
+
 
