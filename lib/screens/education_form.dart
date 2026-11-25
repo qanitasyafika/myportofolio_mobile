@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:myportofolio_mobile/widgets/left_drawer.dart';
@@ -139,10 +138,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
                     border: OutlineInputBorder(),
                   ),
                   items: _levels.map((level) {
-                    return DropdownMenuItem(
-                      value: level,
-                      child: Text(level),
-                    );
+                    return DropdownMenuItem(value: level, child: Text(level));
                   }).toList(),
                   onChanged: (value) {
                     _educationLevel = value;
@@ -186,9 +182,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
                 TextFormField(
                   key: const Key('startYearField'),
                   keyboardType: TextInputType.number,
-                  inputFormatters: [
-                    FilteringTextInputFormatter.digitsOnly,
-                  ],
+                  inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                   maxLength: 4,
                   decoration: const InputDecoration(
                     labelText: 'Tahun Masuk',
@@ -207,9 +201,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
                 TextFormField(
                   key: const Key('endYearField'),
                   keyboardType: TextInputType.number,
-                  inputFormatters: [
-                    FilteringTextInputFormatter.digitsOnly,
-                  ],
+                  inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                   maxLength: 4,
                   decoration: const InputDecoration(
                     labelText: 'Tahun Lulus',
@@ -221,10 +213,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
                     _endYear = value;
                   },
                   validator: (value) {
-                    final error = _validateYear(
-                      value,
-                      'Tahun lulus',
-                    );
+                    final error = _validateYear(value, 'Tahun lulus');
 
                     if (error != null) {
                       return error;
@@ -247,9 +236,7 @@ class _EducationFormPageState extends State<EducationFormPage> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.indigo,
                       foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 14,
-                      ),
+                      padding: const EdgeInsets.symmetric(vertical: 14),
                     ),
                     onPressed: _saveForm,
                     child: const Text('Simpan'),

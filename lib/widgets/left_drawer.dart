@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:myportofolio_mobile/routes.dart';
 
@@ -13,9 +12,7 @@ class LeftDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
             padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
-            decoration: BoxDecoration(
-              color: Colors.indigo,
-            ),
+            decoration: BoxDecoration(color: Colors.indigo),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Column(
@@ -37,10 +34,7 @@ class LeftDrawer extends StatelessWidget {
                     'Explore personal projects and experiences!',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white,
-                    ),
+                    style: TextStyle(fontSize: 12, color: Colors.white),
                   ),
                 ],
               ),
@@ -50,30 +44,21 @@ class LeftDrawer extends StatelessWidget {
             leading: const Icon(Icons.home_outlined),
             title: const Text('Home'),
             onTap: () {
-              Navigator.pushReplacementNamed(
-                context,
-                AppRoutes.home,
-              );
+              Navigator.pushReplacementNamed(context, AppRoutes.home);
             },
           ),
           ListTile(
             leading: const Icon(Icons.add_circle_outline),
             title: const Text('Add Project'),
             onTap: () {
-              Navigator.pushNamed(
-                context,
-                AppRoutes.project,
-              );
+              Navigator.pushNamed(context, AppRoutes.project);
             },
           ),
           ListTile(
             leading: const Icon(Icons.school_outlined),
             title: const Text('Tambah Edukasi'),
             onTap: () {
-              Navigator.pushNamed(
-                context,
-                AppRoutes.education,
-              );
+              Navigator.pushNamed(context, AppRoutes.education);
             },
           ),
         ],
